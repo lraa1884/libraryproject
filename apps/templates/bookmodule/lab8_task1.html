@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<h1>Books with Price ≤ 80</h1>
+<ul>
+  {% for book in books %}
+    <li>{{ book.title }} — {{ book.author }} — ${{ book.price }}</li>
+  {% empty %}
+    <li>No books found.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
