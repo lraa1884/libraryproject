@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+
+<h1>Highly Rated Books</h1>
+
+<table border="1">
+
+<tr>
+    <th>Publisher</th>
+    <th>Highly Rated Books</th>
+</tr>
+
+{% for p in publishers %}
+
+<tr>
+    <td>{{ p.name }}</td>
+    <td>{{ p.high_rated_books }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+</head>
+<body>
+
+<h1>Books Percentage Availability</h1>
+
+<table border="1">
+
+<tr>
+    <th>Title</th>
+    <th>Quantity</th>
+    <th>Percentage</th>
+</tr>
+
+{% for book in books %}
+
+<tr>
+    <td>{{ book.title }}</td>
+    <td>{{ book.quantity }}</td>
+    <td>{{ book.percentage|floatformat:2 }}%</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
